@@ -1,0 +1,81 @@
+.Popup {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+  overflow-x: hidden;
+  overflow-y: auto;
+  animation: fadeIn 1s;
+}
+
+.moduleBackground {
+  position: absolute;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #06519a;
+  mix-blend-mode: normal;
+  opacity: 0.38;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.ContentContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999999;
+}
+
+.Content {
+  width: 40%;
+  height: auto;
+  padding: 50px 30px;
+  min-width: 500px;
+  z-index: 99999999999;
+  position: relative;
+  background: white;
+  border-radius: 6pxrgb (121, 66, 66);
+}
+
+.ModalCloseBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.ModalCloseBtn img {
+  width: 25px;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.SpinnerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .Content{
+    width: 80%;
+    min-width: 250px;
+  }
+}
